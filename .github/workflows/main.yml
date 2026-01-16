@@ -96,8 +96,7 @@ jobs:
               Write-Error "TCP connection to RDP port 3389 failed"
               exit 1
           }
-          Write-Host "TCP connectivity successful!"
-      
+          Write-Host "TCP connectivity successful!"     
 - name: Install Roblox Studio
   shell: powershell
   run: |
