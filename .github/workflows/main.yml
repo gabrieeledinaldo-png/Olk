@@ -97,14 +97,8 @@ jobs:
               exit 1
           }
           Write-Host "TCP connectivity successful!"
-- name: Install Roblox Studio
-  shell: powershell
-  run: |
-    $url = "https://setup.rbxcdn.com/RobloxStudioLauncherBeta.exe"
-    $installer = "$env:TEMP\RobloxStudioInstaller.exe"
-    Invoke-WebRequest $url -OutFile $installer
-    Start-Process -FilePath $installer -ArgumentList "/silent" -Wait
-- name: Maintain Connection
+
+      - name: Maintain Connection
         run: |
           Write-Host "`n=== RDP ACCESS ==="
           Write-Host "Address: $env:TAILSCALE_IP"
